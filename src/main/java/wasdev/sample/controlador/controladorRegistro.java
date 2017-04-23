@@ -7,6 +7,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import wasdev.sample.logica.Estudiante;
+
 /**
  * Servlet implementation class controladorRegistro
  */
@@ -37,9 +39,17 @@ public class controladorRegistro extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		String nombre=request.getParameter("nombre");
-		System.out.println(nombre);		
 		String carne=request.getParameter("carnet");
-		System.out.println(carne);
+		String apellidos = request.getParameter("apellidos");
+		String fecha = request.getParameter("fecha");
+		String email = request.getParameter("email");
+		String id = request.getParameter("identificacion");
+		Estudiante estudiante = new Estudiante (nombre, apellidos, carne,id,fecha, email);
+		
+		System.out.println(estudiante.toString());
+		System.out.println(nombre);		
+
+
 		response.getWriter().print(nombre);
 	}
 

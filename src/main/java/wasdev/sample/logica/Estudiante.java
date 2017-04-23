@@ -8,18 +8,21 @@ public class Estudiante {
 	private String apellidos;
 	private String carnet;
 	private String identificacion;
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
+	private String email;
 	
 	/**
 	 * 
 	 * Constructor de la clase
 	 */
-	public Estudiante (String pNombre, String pApellidos, String pCarnet, String pID, Date pFechaN){
+	public Estudiante (String pNombre, String pApellidos, String pCarnet, String pID, 
+			String pFechaN, String pEmail){
 		nombre = pNombre;
 		apellidos = pApellidos;
 		carnet = pCarnet;
 		identificacion = pID;
 		fechaNacimiento = pFechaN;
+		email = pEmail;
 	}
 	
 	/**
@@ -50,12 +53,19 @@ public class Estudiante {
 	public void setIdentificacion(String pIdentificacion) {
 		identificacion = pIdentificacion;
 	}
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	public void setFechaNacimiento(Date pFechaNacimiento) {
+	public void setFechaNacimiento(String pFechaNacimiento) {
 		fechaNacimiento = pFechaNacimiento;
 	}
+
+	@Override
+	public String toString() {
+		return "Estudiante [nombre=" + nombre + ", apellidos=" + apellidos + ", carnet=" + carnet + ", identificacion="
+				+ identificacion + ", fechaNacimiento=" + fechaNacimiento + ", email=" + email + "]";
+	}
+	
 	
 	
 	
