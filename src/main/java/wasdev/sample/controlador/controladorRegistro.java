@@ -50,7 +50,7 @@ public class controladorRegistro extends HttpServlet {
 		System.out.println(nombre);		
 
 
-		response.getWriter().print(nombre);
+		response.getWriter().print(estudiante.toString());
 	}
 
 }
