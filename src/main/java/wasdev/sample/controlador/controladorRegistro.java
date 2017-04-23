@@ -1,4 +1,4 @@
-package controlador;
+package wasdev.sample.controlador;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
