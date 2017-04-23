@@ -35,27 +35,59 @@ public class Estudiante {
 	public void setNombre(String pNombre) {
 		nombre = pNombre;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public String getApellidos() {
 		return apellidos;
 	}
+	/**
+	 * 
+	 * @param pApellidos
+	 */
 	public void setApellidos(String pApellidos) {
 		apellidos = pApellidos;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public String getCarnet() {
 		return carnet;
 	}
+	/**
+	 * 
+	 * @param pCarnet
+	 */
 	public void setCarnet(String pCarnet) {
 		carnet = pCarnet;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public String getIdentificacion() {
 		return identificacion;
 	}
+	/**
+	 * 
+	 * @param pIdentificacion
+	 */
 	public void setIdentificacion(String pIdentificacion) {
 		identificacion = pIdentificacion;
 	}
+	/**
+	 * 
+	 * @return
+	 */
 	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
+	/**
+	 * 
+	 * @param pFechaNacimiento
+	 */
 	public void setFechaNacimiento(String pFechaNacimiento) {
 		fechaNacimiento = pFechaNacimiento;
 	}
