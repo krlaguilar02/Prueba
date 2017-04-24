@@ -43,6 +43,7 @@ public class controladorRegistro extends HttpServlet {
 		
 		System.out.println(estudiante.toString());
 		System.out.println(nombre);	
+		response.sendRedirect("/Administrador.html");
 		
 		
 		
