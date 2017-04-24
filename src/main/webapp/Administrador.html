@@ -12,28 +12,51 @@
     <link href="bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="simple-sidebar.css" rel="stylesheet">
+    <script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 </head>
 <body>
-	<article id= "admi">
-		<h3 class="major">Inicio Sesion</h3>
-		<form name= "InicioSesionA"> 
-			<div class="field half first">
-				<label for="Correo">Correo</label>
-				<input type="email" name="correo" id="correo" value="" placeholder="Admi@gmail.com" />
-			</div>
-			<div class="field half first">
-				<label for="Contrasena">Contraseña</label>
-				<input type="password" name="password" id="password" value="" placeholder="Contrasena" />
-			</div>
-			<ul class="actions">
-				<li><input type="submit" value="Entrar" class="special"/></li>
-			</ul>
-			
-		</form>
-		
-	</article>
+<div id="wrapper">
+		<header id="header">
+			<h1>Inicio Sesion</h1>
+			<form name="InicioSesionA">
+				<div class="field half first">
+					<label for="Correo">Correo</label> <input type="email"
+						name="correo" id="correo" value="" placeholder="Admi@gmail.com" />
+				</div>
+				<div class="field half first">
+					<label for="Contrasena">Contraseña</label> <input type="password"
+						name="password" id="password" value="" placeholder="Contrasena" />
+				</div>
+				<nav>
+					<ul>
+						<li><a href="#moduloAdmi">Entrar</a> <!-- <input type="submit" value= "Entrar" class="special"/> --></li>
+					</ul>
+				</nav>
+			</form>
+		</header>
 
+		<div id = "main">	
 
+		<article id = "moduloAdmi">
+		<header id="header">
+			<h2 class="major">Modulo Administrativo</h2>
+				<nav>
+				<ul>
+					<li><a href="#moduloAdmi">Entrar</a></li>
+					<li><a href="#moduloAdmi">Entrar</a> </li>
+					<li><a href="#moduloAdmi">Entrar</a> </li>
+					<li><a href="#moduloAdmi">Entrar</a>  </li>
+				</ul>
+				</nav>
+				</header>
+			</article>	
+
+</div>
+
+</div>
 </body>
 </html>
