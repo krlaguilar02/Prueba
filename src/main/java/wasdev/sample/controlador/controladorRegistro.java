@@ -1,5 +1,8 @@
 package wasdev.sample.controlador;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,15 +32,7 @@ public class controladorRegistro extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		String nombre=request.getParameter("nombre");
 		String carne=request.getParameter("carnet");
 		String apellidos = request.getParameter("apellidos");
@@ -47,9 +42,32 @@ public class controladorRegistro extends HttpServlet {
 		Estudiante estudiante = new Estudiante (nombre, apellidos, carne,id,fecha, email);
 		
 		System.out.println(estudiante.toString());
-		System.out.println(nombre);		
+		System.out.println(nombre);	
+		
+		
+		
+		String ruta = "src/archivo.txt";
+        File archivo = new File(ruta);
+        BufferedWriter bw;
+        if(archivo.exists()) {
+            bw = new BufferedWriter(new FileWriter(archivo));
+            bw.write(estudiante.toString());
+        } else {
+            bw = new BufferedWriter(new FileWriter(archivo));
+            bw.write(estudiante.toString());
+        }
+        bw.close();
+		
+		
+	}
 
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		//doGet(request, response);
+	
 		//response.getWriter().print(estudiante.toString());
 	}
 
