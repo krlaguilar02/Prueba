@@ -54,7 +54,7 @@ public class controladorRegistro extends HttpServlet {
 		System.out.println(nombre);	
 		request.setAttribute("nombre",nombre);
 		request.getRequestDispatcher("Administrador.html");
-		response.getWriter().print(estudiante.toString());
+		//response.getWriter().print(estudiante.toString());
 		//response.sendRedirect("Administrador.html");
 		
 		
@@ -88,10 +88,7 @@ public class controladorRegistro extends HttpServlet {
 		 email = request.getParameter("email");
 		 id = request.getParameter("identificacion");
 		 estudiante = new Estudiante (nombre, apellido, carne,id,fecha, email);
-		
-		System.out.println(estudiante.toString());
-		System.out.println(nombre);	
-		
+	
 		
 		if (email != null) {
             request.getSession().setAttribute("email", email);
