@@ -90,14 +90,14 @@ public class controladorRegistro extends HttpServlet {
 		 estudiante = new Estudiante (nombre, apellido, carne,id,fecha, email);
 	
 		
-		if (email != null) {
+		/**if (email != null) {
             request.getSession().setAttribute("email", email);
             response.sendRedirect("index");
         }
         else {
             request.setAttribute("error", "Unknown user, please try again");
             request.getRequestDispatcher("Administrador.html").forward(request, response);
-        }
+        }**/
 		//response.getWriter().print(estudiante.toString());
 	}
 
