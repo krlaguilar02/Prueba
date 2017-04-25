@@ -59,7 +59,7 @@ public class controladorRegistro extends HttpServlet {
 		
 		
 		
-		String ruta = "src/archivo.txt";
+		/**String ruta = "src/archivo.txt";
         File archivo = new File(ruta);
         BufferedWriter bw;
         if(archivo.exists()) {
@@ -69,7 +69,7 @@ public class controladorRegistro extends HttpServlet {
             bw = new BufferedWriter(new FileWriter(archivo));
             bw.write(estudiante.toString());
         }
-        bw.close();
+        bw.close();**/
 		
 		
 	}
@@ -91,7 +91,7 @@ public class controladorRegistro extends HttpServlet {
 		
 		System.out.println(estudiante.toString());
 		System.out.println(nombre);	
-		response.getWriter().print(estudiante.toString());
+		//response.getWriter().print(estudiante.toString());
 	}
 
 }
