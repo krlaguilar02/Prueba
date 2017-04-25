@@ -83,7 +83,7 @@ public class controladorRegistro extends HttpServlet {
 		nombre=request.getParameter("nombre");
 		
 		 carne=request.getParameter("carnet");
-		 apellido = request.getParameter("apellidos");
+		 apellido = request.getParameter("apellido1");
 		 fecha = request.getParameter("fecha");
 		 email = request.getParameter("email");
 		 id = request.getParameter("identificacion");
@@ -91,6 +91,16 @@ public class controladorRegistro extends HttpServlet {
 		
 		System.out.println(estudiante.toString());
 		System.out.println(nombre);	
+		
+		
+		if (email != null) {
+            request.getSession().setAttribute("email", email);
+            response.sendRedirect("index");
+        }
+        else {
+            request.setAttribute("error", "Unknown user, please try again");
+            request.getRequestDispatcher("Administrador.html").forward(request, response);
+        }
 		//response.getWriter().print(estudiante.toString());
 	}
 
