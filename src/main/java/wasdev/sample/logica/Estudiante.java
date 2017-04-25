@@ -5,7 +5,7 @@ import java.util.Date;
 public class Estudiante {
 	
 	private String nombre;
-	private String apellidos;
+	private String apellido1;
 	private String carnet;
 	private String identificacion;
 	private String fechaNacimiento;
@@ -15,10 +15,10 @@ public class Estudiante {
 	 * 
 	 * Constructor de la clase
 	 */
-	public Estudiante (String pNombre, String pApellidos, String pCarnet, String pID, 
+	public Estudiante (String pNombre, String pApellido1, String pCarnet, String pID, 
 			String pFechaN, String pEmail){
 		nombre = pNombre;
-		apellidos = pApellidos;
+		apellido1 = pApellido1;
 		carnet = pCarnet;
 		identificacion = pID;
 		fechaNacimiento = pFechaN;
@@ -39,15 +39,15 @@ public class Estudiante {
 	 * 
 	 * @return
 	 */
-	public String getApellidos() {
-		return apellidos;
+	public String getApellido1() {
+		return apellido1;
 	}
 	/**
 	 * 
 	 * @param pApellidos
 	 */
-	public void setApellidos(String pApellidos) {
-		apellidos = pApellidos;
+	public void setApellidos(String pApellido1) {
+		apellido1 = pApellido1;
 	}
 	/**
 	 * 
@@ -94,9 +94,11 @@ public class Estudiante {
 
 	@Override
 	public String toString() {
-		return "Estudiante [nombre=" + nombre + ", apellidos=" + apellidos + ", carnet=" + carnet + ", identificacion="
+		return "Estudiante [nombre=" + nombre + ", apellido1=" + apellido1 + ", carnet=" + carnet + ", identificacion="
 				+ identificacion + ", fechaNacimiento=" + fechaNacimiento + ", email=" + email + "]";
 	}
+
+	
 	
 	
 	
