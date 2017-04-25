@@ -92,7 +92,7 @@ public class controladorRegistro extends HttpServlet {
 		
 		if (email != null) {
             request.getSession().setAttribute("email", email);
-            response.sendRedirect("IniciarSesion.html");
+            response.sendRedirect("InicioSesion.html");
         }
         else {
             request.setAttribute("error", "Unknown user, please try again");
